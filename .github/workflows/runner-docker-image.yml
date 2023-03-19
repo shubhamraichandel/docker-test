@@ -11,5 +11,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Hello, World
-      run: echo 'Hello World'
+    - name: Running MySQL
+      run: docker run -p 3306:3306 --name=mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
