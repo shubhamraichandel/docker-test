@@ -8,17 +8,6 @@ jobs:
   build:
 
     runs-on: [self-hosted, macOS, X64, test1]
-    
-    container:
-      image: mysql:8.0
-      env:
-        MYSQL_DATABASE: test_db
-        MYSQL_USER: test1
-        MYSQL_PASSWORD: test1
-        MYSQL_ROOT_PASSWORD: root
-      
-      ports:
-        - 3306:3306
 
     steps:
     - name: Checkout
